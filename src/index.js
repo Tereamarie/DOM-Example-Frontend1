@@ -54,6 +54,10 @@ h1.textContent = siteContent['cta']['h1'];
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
+//load page 
+window.addEventListener("load", () => {
+   alert("Great Idea");
+})
 
 
 // Nav
@@ -65,9 +69,7 @@ topNav[3].textContent = siteContent['nav']['nav-item-4'];
 topNav[4].textContent = siteContent['nav']['nav-item-5'];
 topNav[5].textContent = siteContent['nav']['nav-item-6'];
 // to add style use a forEach function 
-topNav.forEach ((e) => {
-  e.style.color = 'red';
-})
+
 
 // Top Content
 const h4 = document.querySelectorAll('h4');
