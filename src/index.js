@@ -54,22 +54,40 @@ h1.textContent = siteContent['cta']['h1'];
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
-//load page 
-window.addEventListener("load", () => {
-   alert("Great Idea");
+button.addEventListener('click', (event) => {
+  event.target.style.backgroundColor = 'red';
 })
+button.addEventListener('mouseover', () => {
+  button.style.backgroundColor = "pink"
+})
+//load page 
+// window.addEventListener("load", () => {
+//    alert("Great Idea");
+// })
 
 
 // Nav
-const topNav = document.querySelectorAll('nav a');
-topNav[0].textContent = siteContent['nav']['nav-item-1'];
-topNav[1].textContent = siteContent['nav']['nav-item-2'];
-topNav[2].textContent = siteContent['nav']['nav-item-3'];
-topNav[3].textContent = siteContent['nav']['nav-item-4'];
-topNav[4].textContent = siteContent['nav']['nav-item-5'];
-topNav[5].textContent = siteContent['nav']['nav-item-6'];
+const nav = document.querySelectorAll('nav a');
+nav[0].textContent = siteContent['nav']['nav-item-1'];
+nav[1].textContent = siteContent['nav']['nav-item-2'];
+nav[2].textContent = siteContent['nav']['nav-item-3'];
+nav[3].textContent = siteContent['nav']['nav-item-4'];
+nav[4].textContent = siteContent['nav']['nav-item-5'];
+nav[5].textContent = siteContent['nav']['nav-item-6'];
 // to add style use a forEach function 
 
+// const aChildAppend = document.createElement("a");
+// aChildAppend.href = "#";
+// aChildAppend.textContent = "Contact";
+// aChildAppend.style.color = "green";
+// const nav = document.querySelector("nav");
+// nav.appendChild(aChildAppend);
+
+// const aPrepend = document.createElement("a");
+// aPrepend.href = "#";
+// aPrepend.textContent = "Prepend";
+// aPrepend.style.color = "green";
+// nav.prepend(aPrepend);
 
 // Top Content
 const h4 = document.querySelectorAll('h4');
@@ -95,5 +113,7 @@ p[7].textContent = siteContent['contact']['email'];
 
 const bottomContent = document.querySelector('footer');
 bottomContent.textContent = siteContent['footer']['copyright']
+
+
 
 console.log('project wired!')
